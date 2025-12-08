@@ -1,4 +1,5 @@
-# Neetu is a stupid B HA !! HA  !! HA !! HA !!!
+
+# Neetu is a stupid B HA !! HA  !! HA !! HA !
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -58,7 +59,7 @@ plugins:
 
 author:
   name   : "Prashant Bathula"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/prash.jpg"
   bio    : "Just your average guy trying to be ocassionaly curios :P"
   links:
     - label: "Website"
