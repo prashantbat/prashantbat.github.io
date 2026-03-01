@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Playing with OpenClaw: An IT Guy's Journey into AI Agents"
-subtitle: "From Zero to Kubernetes Architectural Guide in One Sitting"
-categories: [AI, DevOps, Kubernetes, OpenClaw]
+title:  "Playing with OpenClaw"
+subtitle: "An IT Guy's Journey into AI Agents"
+categories: [AI, OpenClaw]
 author: Prashant Bathula
 date: 2026-03-01
 thumbnail: /assets/images/openclaw-logo.png
@@ -10,7 +10,7 @@ thumbnail: /assets/images/openclaw-logo.png
 
 ## Introduction
 
-As an IT professional with years of experience in traditional infrastructure and cloud technologies, I've always been curious about the AI/Agent revolution but found the entry barrier quite high. That all changed when I discovered OpenClaw. This is my journey from installation to actually understanding how AI agents can transform my daily workflow.
+As an IT professional with years of experience in traditional infrastructure and cloud technologies, I've always been curious about the AI/Agent revolution but found the entry barrier quite high. That all changed when I discovered OpenClaw. This is my journey from installation to actually trying to understand  how AI agents can transform my daily workflow.
 
 ## What is OpenClaw?
 
@@ -20,17 +20,16 @@ OpenClaw is an open-source AI agent platform that brings the power of AI assista
 
 ### Prerequisites
 
-Before diving into OpenClaw, ensure you have:
+Before diving into OpenClaw, ensure you have decided where you want to install Openclaw , your personal laptop? An AWS EC2 Instance?.
+Since I already have an AWS account and have been using for some other Learning POC, I created one more EC2 Instance (t3.Large) specifically for this use case.
 
 ```bash
-# Node.js (v18+ recommended)
+# Node.js (v22+ recommended)
 node --version
 
 # npm or yarn
 npm --version
 
-# A GitHub account (for authentication)
-```
 
 ### Step 1: Installation
 
@@ -38,26 +37,22 @@ The installation process is surprisingly straightforward:
 
 ```bash
 # Install OpenClaw globally
-npm install -g openclaw
+npm install -g openclaw@2026.2.9  
+OR you could just run the bash script from Openclaw official site.
 
 # Verify installation
 openclaw --version
 
-# Initialize your workspace
-openclaw init
 ```
 
-### Step 2: Authentication
+###Step 2: While Installing you can skip adding Channels(Telgram) or AI model(Initially) which we can configure later.
+Refer these youtube videos 
+https://www.youtube.com/watch?v=C-_ngZTKmGs&t=167s (this is Abhishek Veeramalla's Video which I used for initial reference, though he has used Gemini LLM in this video , I had used the  openrouter/z-ai/glm-4.5-air:free, Model as initially I was just experimenting)
 
-OpenClaw uses GitHub for authentication, which is perfect for developers:
+###Step 3: Configure Telegram with Openclaw
+Now comes the interesting part which is kind of highlight of this Agent right being able to be controlled by a messaging app on your phone , playing cool and offloading tasks to your AI partner .
 
-```bash
-# Login with your GitHub account
-openclaw auth login
-
-# Verify your authentication
-openclaw auth status
-```
+Open Telegram on your mobile phone and search for "BotFather" and type "/start" and later "/newbot" to create your bot , give it a name and a username for your bot, Later you will get a message having your token to Access this bot, keep this token secure and safe as it will be needed to configure your Telegram channel in openclaw
 
 ### Step 3: First Interaction
 
@@ -76,12 +71,12 @@ openclaw chat "Hello, help me understand Kubernetes networking"
 ### First Impressions
 
 **What I loved:**
-- **Instant setup**: From installation to first interaction took less than 10 minutes
 - **Familiar interface**: Works exactly like a terminal chat
 - **Context awareness**: Remembers previous conversations
 - **Tool integration**: Can execute commands, read files, and interact with your system
 
 **Initial challenges:**
+- Setup Related Challenges (as i installed beta version initially having issues with Telegram Provider)
 - Understanding the agent's capabilities
 - Learning how to phrase requests effectively
 - Getting used to the AI's thought process
