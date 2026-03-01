@@ -25,9 +25,9 @@ As an IT professional with years of experience in traditional infrastructure and
 
 OpenClaw is an open-source AI agent platform that brings the power of AI assistants directly to your terminal. Unlike complex enterprise solutions, OpenClaw is designed for developers and IT professionals who want to experiment with AI agents without the steep learning curve.
 
-## Installation Journey 🚀
+## Installation Journey
 
-### Prerequisites 🛠️
+### Prerequisites
 
 Before diving into OpenClaw, ensure you have decided where you want to install Openclaw , your personal laptop? An AWS EC2 Instance?.
 Since I already have an AWS account and have been using for some other Learning POC, I created one more EC2 Instance (t3.Large) specifically for this use case.
@@ -40,7 +40,7 @@ node --version
 npm --version
 
 
-### Step 1: Installation ⚡
+### Step 1: Installation
 
 The installation process is surprisingly straightforward:
 
@@ -54,11 +54,11 @@ openclaw --version
 
 ```
 
-### Step 2: Initial Setup 📱
+### Step 2: Initial Setup
 Refer these youtube videos 
 https://www.youtube.com/watch?v=C-_ngZTKmGs&t=167s (this is Abhishek Veeramalla's Video which I used for initial reference, though he has used Gemini LLM in this video , I had used the  openrouter/z-ai/glm-4.5-air:free, Model as initially I was just experimenting)
 
-### Step 3: Telegram Integration 🤖
+### Step 3: Telegram Integration
 Now comes the interesting part which is kind of highlight of this Agent right being able to be controlled by a messaging app on your phone , playing cool and offloading tasks to your AI partner .
 
 Open Telegram on your mobile phone and search for "BotFather" and type "/start" and later "/newbot" to create your bot , give it a name and a username for your bot, Later you will get a message having your token to Access this bot, keep this token secure and safe as it will be needed to configure your Telegram channel in openclaw
