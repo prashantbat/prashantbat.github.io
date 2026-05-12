@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initCodeCopyButtons() {
     // Find all code blocks and add copy functionality
-    const codeBlocks = document.querySelectorAll('.highlight pre, .highlight code');
+    const codeBlocks = document.querySelectorAll('.highlight pre, .highlight code, pre code');
     
     codeBlocks.forEach(function(codeBlock) {
         // Check if this code block already has a wrapper
@@ -22,7 +22,9 @@ function initCodeCopyButtons() {
         const wrapper = createCodeWrapper(codeBlock, language);
         
         // Replace the original code block with the wrapper
-        codeBlock.parentNode.replaceChild(wrapper, codeBlock);
+        if (codeBlock.parentNode) {
+            codeBlock.parentNode.replaceChild(wrapper, codeBlock);
+        }
     });
 }
 
@@ -34,6 +36,13 @@ function getLanguage(codeBlock) {
     const match = classes.match(/language-(\w+)/);
     if (match) {
         return match[1];
+    }
+    
+    // Check code block itself
+    const blockClasses = codeBlock.className || '';
+    const blockMatch = blockClasses.match(/language-(\w+)/);
+    if (blockMatch) {
+        return blockMatch[1];
     }
     
     // Fallback to 'bash' for terminal commands
