@@ -1,5 +1,5 @@
 ---
-layout: code-copy
+layout: post
 title: "Playing with OpenClaw: An IT Guy's Journey into AI Agents"
 date: 2026-03-01T00:00:00+00:00
 categories:

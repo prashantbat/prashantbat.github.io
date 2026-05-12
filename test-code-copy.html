@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Code Copy Functionality</title>
+    <link rel="stylesheet" href="/assets/css/code-copy.css">
+</head>
+<body>
+    <h1>Test Code Copy Functionality</h1>
+    
+    <h2>Test 1: Bash Commands</h2>
+    <div class="highlight">
+        <pre><code class="language-bash"># Install OpenClaw globally
+npm install -g openclaw@2026.2.9
+
+# Verify installation
+openclaw --version</code></pre>
+    </div>
+    
+    <h2>Test 2: Another Code Block</h2>
+    <div class="highlight">
+        <pre><code class="language-bash"># Check the current session status
+openclaw status
+
+# Start a new session
+openclaw chat "Hello, help me understand Kubernetes networking"</code></pre>
+    </div>
+    
+    <h2>Test 3: Without language specification</h2>
+    <div class="highlight">
+        <pre><code># This is a test code block without language specification
+echo "Hello, World!"
+ls -la</code></pre>
+    </div>
+    
+    <script src="/assets/js/code-copy.js"></script>
+</body>
+</html>
