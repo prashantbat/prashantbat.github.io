@@ -44,7 +44,7 @@ node --version
 
 # npm or yarn
 npm --version
-
+```
 
 ### Step 1: Installation
 
@@ -57,7 +57,6 @@ OR you could just run the bash script from Openclaw official site.
 
 # Verify installation
 openclaw --version
-
 ```
 
 ### Step 2: Initial Setup
